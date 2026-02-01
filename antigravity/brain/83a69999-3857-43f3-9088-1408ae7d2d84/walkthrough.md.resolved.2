@@ -1,0 +1,39 @@
+# Ceremonialist Management System - Final Walkthrough
+
+O sistema de gestão para Cerimonialistas foi concluído seguindo uma estética **rústica e minimalista**, focado em robustez e facilidade de uso.
+
+## Arquitetura "No-Build"
+Para garantir que o sistema funcione em qualquer ambiente sem necessidade de instalação de ferramentas (como Node.js), utilizei:
+- **HTML5 Semântico**: Estrutura clara e acessível.
+- **CSS3 Moderno**: Sistema de design rústico com variáveis e Layout Flexbox/Grid.
+- **Vanilla JavaScript (Direto)**: Lógica simplificada e direta sem módulos, garantindo compatibilidade total com o protocolo `file://` e navegadores antigos em ambientes locais.
+- **LocalStorage**: Persistência de dados local no navegador.
+- **Handlers Diretos**: Uso de eventos inline para garantir que ações como "Salvar" e "Excluir" funcionem sem falhas de delegação.
+
+## Funcionalidades Implementadas
+
+### 1. Painel Geral (Dashboard)
+- Resumo de métricas (Total de clientes e eventos).
+- Lista de próximos eventos agendados para visualização rápida.
+
+### 2. Gestão de Clientes (CRUD)
+- Listagem em cards elegantes.
+- Criação e edição de clientes com validação.
+- Exclusão com confirmação de segurança.
+
+### 3. Gestão de Fornecedores (CRUD)
+- Cadastro de fornecedores por categoria (Buffet, Decoração, etc.).
+- Organização rústica e minimalista para contatos rápidos.
+
+### 4. Relatórios e Exportação PDF
+- Menu dedicado para geração de relatórios.
+- Exportação profissional via sistema de impressão do navegador (`window.print()`).
+- Layout otimizado para papel (oculta menu e botões automaticamente ao imprimir).
+
+## Como Utilizar
+Basta abrir o arquivo [index.html](file:///c:/Users/val_s/.gemini/antigravity/playground/vector-mare/index.html) no seu navegador. Não é necessário nenhum servidor ou instalação.
+
+## Próximos Passos Sugeridos
+- Implementar gestão de fornecedores (estrutura já preparada no CSS/HTML).
+- Adicionar funcionalidade de exportação de relatórios em PDF.
+- Personalização de cores do tema rústico.

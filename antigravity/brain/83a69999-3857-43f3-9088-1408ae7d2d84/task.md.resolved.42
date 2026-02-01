@@ -1,0 +1,116 @@
+# Ceremonialist Management System - Tasks
+
+- [x] Project Setup and Planning
+    - [x] Initialize directory structure (No-build HTML/CSS/JS)
+    - [x] Create initial Implementation Plan
+    - [x] Create base index.html and style.css
+- [x] Design System and Layout
+    - [x] Setup Base CSS with rustic/minimalist variables
+    - [x] Create Layout component (Navigation, Header, Main)
+- [x] Client Management (CRUD)
+    - [x] Client Schema and Data layer
+    - [x] Client List and Detail views
+    - [x] Create/Edit Client forms
+- [x] Event Management (CRUD)
+    - [x] Event Schema (link to client)
+    - [x] Event List view (Calendar or List)
+    - [x] Event Creation flow
+- [x] Vendor Management (CRUD)
+    - [x] Vendor Schema
+    - [x] Vendor Management UI
+- [x] Reports and PDF Export
+    - [x] Implement Print-friendly CSS
+    - [x] Add PDF export functionality
+    - [x] Add reports for Events and Clients
+- [x] Dashboard and Final Polish
+    - [x] Overview Dashboard
+    - [x] Final verification and Walkthrough
+- [x] Bug Fix: Page Load Logic
+    - [x] Consolidate JS for file protocol compatibility
+- [x] Bug Fix: CRUD Functionality
+    - [x] Identify and fix storage/event listener issues
+- [x] Feature: Event Checklist
+    - [x] Update event schema with checklist support
+    - [x] Implement checklist UI (Add/Toggle items)
+    - [x] Add progress indicators
+- [x] Feature: Event Time and Completion Tracking
+    - [x] Update event form with time field
+    - [x] Display time in event tables
+    - [x] Implement "Finalize" action for events
+    - [x] Create "Completed Events" table
+- [x] Feature: Individual Reporting and Detail Views
+    - [x] Create Client Detail view with event history
+    - [x] Implement individual report generation for Clients
+    - [x] Implement individual report generation for Events
+    - [x] Make Client cards interactive to open details
+- [x] Feature: Client Pre-Contract Management
+    - [x] Create default contract template
+    - [x] Implement Contract Editor view for clients
+    - [x] Add "Print Contract" functionality
+    - [x] Ensure contract persistence in LocalStorage
+- [x] Task: Tradução Completa para PT-BR
+    - [x] Auditar e traduzir termos no app.js
+    - [x] Traduzir metadados e textos no index.html
+    - [x] Verificar style.css por conteúdos gerados
+- [x] Feature: Sistema de Busca Inteligente
+    - [x] Adicionar campo de busca na Top Bar
+    - [x] Implementar lógica de filtragem no app.js
+    - [x] Garantir que a busca funcione em Clientes, Eventos e Fornecedores
+    - [x] Limpar busca ao navegar entre páginas
+- [x] Task: Reformulação Visual Moderno-Minimalista
+    - [x] Definir nova paleta de cores premium e tipografia
+    - [x] Atualizar style.css com estética moderna
+    - [x] Adicionar micro-animações e estados de hover
+- [x] Feature: Gráficos de Progresso Visual
+    - [x] Implementar componente de gráfico circular (SVG Gauge) para eventos
+    - [x] Adicionar resumo de progresso no Dashboard
+    - [x] Integrar gráficos na lista de eventos e detalhes do cliente
+- [x] Feature: Identidade Visual e Galeria de Fotos
+    - [x] Criar tela de Configurações para upload de Logotipo
+    - [x] Implementar persistence do logotipo no LocalStorage
+    - [x] Adicionar suporte a galeria de imagens nos Eventos
+    - [x] Criar visualizador de fotos (Lightbox simples)
+- [x] Task: Refinamento de Interface e Galeria Global
+    - [x] Corrigir termos: 'Add' -> 'Adicionar', 'Fim' -> 'Finalizar', 'List' -> 'Checklist'
+    - [x] Adicionar item 'Galeria' ao menu de navegação
+    - [x] Implementar visão de Galeria Global (todas as fotos de todos os eventos)
+- [x] Task: Responsividade Mobile
+    - [x] Adicionar Viewport Meta tag e Menu Hamburger
+    - [x] Criar Media Queries para Sidebar retrátil no mobile
+    - [x] Ajustar Grids e Tabelas para telas pequenas
+    - [x] Implementar lógica JS para fechar menu ao navegar
+- [x] Task: Refinamento Estético (Matching com Logotipo)
+    - [x] Aplicar nova paleta base Premium (Champagne & Charcoal) no [style.css](file:///c:/Users/val_s/.gemini/antigravity/playground/vector-mare/style.css)
+    - [x] Implementar Seletor de Cores dinâmico em Configurações
+    - [x] Corrigir sombras e estados de hover para usar variáveis dinâmicas
+    - [x] Validar harmonia visual geral (Verificação Manual solicitada)
+- [x] Task: Sistema Multi-usuário e Segurança
+    - [x] Criar lógica de Autenticação (Login/Signup) no `auth.js` (ou [app.js](file:///c:/Users/val_s/.gemini/antigravity/playground/vector-mare/js/app.js))
+    - [x] Implementar hashing de senhas com Web Crypto API
+    - [x] Atualizar camada de `storage` para isolamento de dados por `userId`
+    - [x] Criar interface de Login/Cadastro moderna
+    - [x] Adicionar controle de sessão e Logout
+    - [x] Validar privacidade entre diferentes contas
+- [x] Task: Vínculo de Eventos e Fornecedores
+    - [x] Atualizar formulário de evento para seleção múltipla de fornecedores
+    - [x] Adaptar lógica de salvamento para persistir `vendorIds`
+    - [x] Exibir fornecedores vinculados na view de Checklist/Detalhes
+    - [x] Incluir fornecedores nos relatórios impressos do evento
+- [x] Task: Refinamento de Acesso a Fornecedores
+    - [x] Remover lista de fornecedores da view de Checklist
+    - [x] Adicionar botão "Adicionar Fornecedor" na tabela de eventos
+    - [x] Substituir checkboxes por Drop-down Multi-seleção no formulário
+- [x] Task: Relatórios de Eventos Finalizados
+    - [x] Adicionar botão de impressão individual em eventos finalizados
+    - [x] Adicionar botão de relatório geral para eventos finalizados
+    - [x] Atualizar lógica de impressão para filtrar eventos concluídos
+- [x] Task: Gestão Financeira e de Convidados
+    - [x] Adicionar campos de convidados e valores no formulário de evento
+    - [x] Implementar cálculo automático de valor total no formulário
+    - [x] Exibir colunas financeiras e de convidados nas tabelas de eventos
+    - [x] Incluir dados financeiros nos relatórios impressos
+- [x] Task: Gestão de Produtos por Fornecedor
+    - [x] Adicionar botão "Cadastrar Produtos" nos cards de fornecedores
+    - [x] Criar view de gerenciamento de produtos (lista e formulário rápido)
+    - [x] Implementar lógica de salvamento de produtos vinculados ao fornecedor
+    - [x] Garantir que os produtos sejam salvos no storage por usuário

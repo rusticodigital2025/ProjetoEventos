@@ -1,0 +1,150 @@
+# Expanded Features - Implementation Plan
+
+This plan outlines the implementation of Vendor Management and a robust Reporting system with PDF/Print capabilities.
+
+## Proposed Changes
+
+### 1. Vendor Management (CRUD)
+Integrating the logic for vendor management, which was already partially prepared in the CSS/HTML structure.
+- **Storage**: Use `storage.js` to manage `vendors` key.
+- **UI**: Add views for Vendor List and Vendor Form in `ui.js`.
+- **Logic**: Wire up navigation and form handling in `app.js`.
+
+### 2. Reporting & PDF Export
+Adding the ability to export data as professional reports.
+- **Print System**: Use a specific `@media print` CSS section to format reports for paper/PDF.
+- **PDF Export**: Utilize the browser's native `window.print()` functionality, which is the most reliable "no-build" way to generate PDFs.
+- **Report Views**: Create specialized views in `ui.js` that are optimized for printing (e.g., "Event Agenda Report", "Client List Report").
+
+### 3. Files to Modify
+
+#### [MODIFY] [style.css](file:///c:/Users/val_s/.gemini/antigravity/playground/vector-mare/style.css)
+Add print-specific styles to hide navigation and format tables/cards for paper.
+
+#### [MODIFY] [js/ui.js](file:///c:/Users/val_s/.gemini/antigravity/playground/vector-mare/js/ui.js)
+Add `vendors` and `report` views.
+
+#### [MODIFY] [js/app.js](file:///c:/Users/val_s/.gemini/antigravity/playground/vector-mare/js/app.js)
+Add event listeners for vendor management, report generation, event time handling, and event status transitions (Finalize Event).
+
+### 7. Reformulação Visual Moderno-Minimalista
+- **Paleta de Cores**: Uso de cores sofisticadas (Slate, Indigo, Sage) e contrastes suaves.
+- **Gráficos de Progresso**: Implementação de gráficos circulares (SVG) que mostram visualmente a conclusão das tarefas diretamente nos cards e tabelas.
+- **Minimalismo**: Redução de bordas pesadas, uso de sombras suaves (bloom effects) e aumento do espaçamento negativo para um ar "Premium".
+
+### 8. Identidade Visual e Galeria de Fotos
+- **Personalização de Logotipo**: Uma nova seção de Configurações permitirá ao usuário carregar uma imagem (convertida para Base64 para persistência local). Este logotipo será exibido na barra lateral e nos relatórios impressos.
+- **Galeria de Eventos**: Cada evento terá uma seção de "Galeria" onde o cerimonialista pode adicionar fotos. 
+- **Otimização de Armazenamento**: Como o LocalStorage tem limites (~5MB), as imagens serão redimensionadas via Canvas API antes de serem salvas para garantir que o sistema continue funcional.
+### 10. Refinamento de Interface e Galeria Global
+
+*   [x] Corrigir traduções: 'Add' -> 'Adicionar', 'Fim' -> 'Finalizar', 'List' -> 'Checklist'.
+*   [x] Criar view global de galeria de fotos.
+*   [x] Mover botão de upload para as tabelas principais.
+
+---
+
+### Refinamento Estético (Matching com Logotipo)
+
+*   [x] Ajustar a paleta de cores (`--primary-color`, `--primary-hover`, etc.) no `style.css` para combinar com o logotipo.
+*   [x] Refinar tipografia se necessário para um visual mais "Premium".
+*   [x] Melhorar contrastes e sombras para um acabamento mais profissional.
+
+---
+
+- **Segurança de Interface**:
+    - Bloqueio de acesso a todas as views sem autenticação.
+    - Botão de Logout e perfil do usuário na sidebar.
+
+---
+
+### Vínculo de Eventos e Fornecedores [NOVO]
+
+Estabelecimento de uma relação N-para-N entre eventos e fornecedores.
+
+- **Data Schema**:
+    - Adição do campo `vendorIds` (array) ao objeto `event`.
+- **Interface de Formulário**:
+    - Atualização do `eventForm` para permitir a seleção de múltiplos fornecedores cadastrados.
+- **Visualização de Detalhes**:
+    - Exibição da lista de fornecedores vinculados na view de checklist ou detalhes do evento.
+- **Relatórios**:
+    - Inclusão dos fornecedores envolvidos nos relatórios individuais de evento.
+
+---
+
+### Gestão Financeira e de Convidados [NOVO]
+
+Adição de métricas financeiras e de volume de público aos eventos.
+
+- **Data Schema**:
+    - Novos campos: `guestCount` (número), `valuePerGuest` (monetário), `totalValue` (monetário).
+- **Interface de Formulário**:
+    - Adição de campos no `eventForm`.
+    - Lógica de cálculo automático: `Total = Convidados * Valor por Pessoa`.
+- **Visualização**:
+    - Inclusão de colunas de Convidados e Valor na tabela de eventos.
+    - Formatação de valores usando `Intl.NumberFormat` (BRL).
+
+---
+
+### Gestão de Catálogo de Fornecedores (Produtos) [NOVO]
+
+Permite que cada fornecedor tenha uma lista de produtos ou serviços oferecidos.
+
+- **Data Schema**:
+    - Adição do campo `products` (array de objetos `{id, name, price}`) ao objeto `vendor`.
+- **Interface**:
+    - Botão "Cadastrar Produtos" nos cards de fornecedores.
+    - Nova view `vendorProducts` para listar e adicionar produtos de um fornecedor específico.
+- **Armazenamento**:
+    - Persistência dentro do objeto do fornecedor no `localStorage`.
+
+---
+
+### Refinamento de UX/UI e Fluxo de Entrada [NOVO]
+
+Melhoria na transição pós-login e polimento visual global.
+
+- **Fluxo de Autenticação**:
+    - Ajuste no `handleLogin` para forçar a renderização imediata do dashboard e limpeza da stack de navegação.
+    - Implementação de um "loading state" suave durante a autenticação.
+- **Visual e UX**:
+    - **Transições**: Adição de animações CSS de "fade-in" nas views para suavizar a mudança de página.
+    - **Cards e Inputs**: Aprimoramento da profundidade visual (sombras mais suaves, bordas arredondadas e estados de focus mais elegantes).
+    - **Sidebar**: Melhoria na separação visual dos itens e feedback de "item ativo".
+    - **Dashboard**: Melhora na legibilidade dos widgets e destaque visual para os números principais.
+- **Feedback ao Usuário**:
+    - Implementação de um sistema simples de "Toast" ou notificações para confirmar ações (salvamento, exclusão).
+
+---
+
+### Correção de Impressão de Contratos [NOVO]
+
+Garantia de que contratos com múltiplas páginas sejam impressos integralmente.
+
+- **Ajustes de CSS (@media print)**:
+    - Sobrescrita de `#app`, `#main-content` e `#view-container` para `height: auto`, `overflow: visible` e `display: block`.
+    - Garantia de que quebras de página sejam respeitadas.
+    - Otimização do contêiner `contract-print-view` para legibilidade em papel.
+
+---
+
+### Remoção de Galeria e Fotos [NOVO]
+
+Simplificação do sistema removendo toda a gestão de imagens de eventos.
+
+- **Interface (index.html)**:
+    - Remoção do item de menu "Galeria".
+- **Lógica e Views (js/app.js)**:
+    - Exclusão da view `gallery`.
+    - Remoção do caso `gallery` no método `render`.
+    - Exclusão de funções de upload e gerenciamento de fotos individuais dentro dos eventos.
+
+## Verification Plan
+- **Traduções**: Revisão completa de botões e labels para garantir 100% de consistência em PT-BR ('Finalizar' e 'Checklist' em vez de 'Fim' e 'List').
+- **Galeria Global**: Nova página que agrega as fotos de todos os eventos, permitindo uma visualização geral do portfólio de cerimônias.
+- **Navegação**: Inclusão do item "Galeria" no menu lateral para acesso rápido.
+2. **Event Filtering**: Ensure events can be viewed clearly for reporting.
+3. **Checklist Functionality**: Verify that checklist items can be added and toggled for each event.
+4. **Print Test**: Trigger `window.print()` and verify (manually/browser subagent) that the layout adapts correctly.

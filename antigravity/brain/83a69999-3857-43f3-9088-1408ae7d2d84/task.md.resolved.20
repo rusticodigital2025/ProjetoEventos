@@ -1,0 +1,59 @@
+# Ceremonialist Management System - Tasks
+
+- [x] Project Setup and Planning
+    - [x] Initialize directory structure (No-build HTML/CSS/JS)
+    - [x] Create initial Implementation Plan
+    - [x] Create base index.html and style.css
+- [x] Design System and Layout
+    - [x] Setup Base CSS with rustic/minimalist variables
+    - [x] Create Layout component (Navigation, Header, Main)
+- [x] Client Management (CRUD)
+    - [x] Client Schema and Data layer
+    - [x] Client List and Detail views
+    - [x] Create/Edit Client forms
+- [x] Event Management (CRUD)
+    - [x] Event Schema (link to client)
+    - [x] Event List view (Calendar or List)
+    - [x] Event Creation flow
+- [x] Vendor Management (CRUD)
+    - [x] Vendor Schema
+    - [x] Vendor Management UI
+- [x] Reports and PDF Export
+    - [x] Implement Print-friendly CSS
+    - [x] Add PDF export functionality
+    - [x] Add reports for Events and Clients
+- [x] Dashboard and Final Polish
+    - [x] Overview Dashboard
+    - [x] Final verification and Walkthrough
+- [x] Bug Fix: Page Load Logic
+    - [x] Consolidate JS for file protocol compatibility
+- [x] Bug Fix: CRUD Functionality
+    - [x] Identify and fix storage/event listener issues
+- [x] Feature: Event Checklist
+    - [x] Update event schema with checklist support
+    - [x] Implement checklist UI (Add/Toggle items)
+    - [x] Add progress indicators
+- [x] Feature: Event Time and Completion Tracking
+    - [x] Update event form with time field
+    - [x] Display time in event tables
+    - [x] Implement "Finalize" action for events
+    - [x] Create "Completed Events" table
+- [x] Feature: Individual Reporting and Detail Views
+    - [x] Create Client Detail view with event history
+    - [x] Implement individual report generation for Clients
+    - [x] Implement individual report generation for Events
+    - [x] Make Client cards interactive to open details
+- [x] Feature: Client Pre-Contract Management
+    - [x] Create default contract template
+    - [x] Implement Contract Editor view for clients
+    - [x] Add "Print Contract" functionality
+    - [x] Ensure contract persistence in LocalStorage
+- [x] Task: Tradução Completa para PT-BR
+    - [x] Auditar e traduzir termos no app.js
+    - [x] Traduzir metadados e textos no index.html
+    - [x] Verificar style.css por conteúdos gerados
+- [x] Feature: Sistema de Busca Inteligente
+    - [x] Adicionar campo de busca na Top Bar
+    - [x] Implementar lógica de filtragem no app.js
+    - [x] Garantir que a busca funcione em Clientes, Eventos e Fornecedores
+    - [x] Limpar busca ao navegar entre páginas

@@ -1,0 +1,34 @@
+# Expanded Features - Implementation Plan
+
+This plan outlines the implementation of Vendor Management and a robust Reporting system with PDF/Print capabilities.
+
+## Proposed Changes
+
+### 1. Vendor Management (CRUD)
+Integrating the logic for vendor management, which was already partially prepared in the CSS/HTML structure.
+- **Storage**: Use [storage.js](file:///c:/Users/val_s/.gemini/antigravity/playground/vector-mare/js/storage.js) to manage [vendors](file:///c:/Users/val_s/.gemini/antigravity/playground/vector-mare/js/app.js#369-391) key.
+- **UI**: Add views for Vendor List and Vendor Form in [ui.js](file:///c:/Users/val_s/.gemini/antigravity/playground/vector-mare/js/ui.js).
+- **Logic**: Wire up navigation and form handling in [app.js](file:///c:/Users/val_s/.gemini/antigravity/playground/vector-mare/js/app.js).
+
+### 2. Reporting & PDF Export
+Adding the ability to export data as professional reports.
+- **Print System**: Use a specific `@media print` CSS section to format reports for paper/PDF.
+- **PDF Export**: Utilize the browser's native `window.print()` functionality, which is the most reliable "no-build" way to generate PDFs.
+- **Report Views**: Create specialized views in [ui.js](file:///c:/Users/val_s/.gemini/antigravity/playground/vector-mare/js/ui.js) that are optimized for printing (e.g., "Event Agenda Report", "Client List Report").
+
+### 3. Files to Modify
+
+#### [MODIFY] [style.css](file:///c:/Users/val_s/.gemini/antigravity/playground/vector-mare/style.css)
+Add print-specific styles to hide navigation and format tables/cards for paper.
+
+#### [MODIFY] [js/ui.js](file:///c:/Users/val_s/.gemini/antigravity/playground/vector-mare/js/ui.js)
+Add [vendors](file:///c:/Users/val_s/.gemini/antigravity/playground/vector-mare/js/app.js#369-391) and [report](file:///c:/Users/val_s/.gemini/antigravity/playground/vector-mare/js/app.js#418-434) views.
+
+#### [MODIFY] [js/app.js](file:///c:/Users/val_s/.gemini/antigravity/playground/vector-mare/js/app.js)
+Add event listeners for vendor management and report generation.
+
+## Verification Plan
+1. **Vendor CRUD**: Create, edit, and delete a vendor.
+2. **Event Filtering**: Ensure events can be viewed clearly for reporting.
+3. **Checklist Functionality**: Verify that checklist items can be added and toggled for each event.
+4. **Print Test**: Trigger `window.print()` and verify (manually/browser subagent) that the layout adapts correctly.

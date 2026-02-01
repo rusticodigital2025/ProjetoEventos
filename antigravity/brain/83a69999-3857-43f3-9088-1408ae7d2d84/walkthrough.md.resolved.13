@@ -1,0 +1,92 @@
+# Ceremonialist Management System - Final Walkthrough (Versão Premium)
+
+O sistema de gestão para Cerimonialistas foi evoluído para uma estética **Moderno-Minimalista Premium**, focada em alta performance e visual sofisticado.
+
+## Nova Identidade Visual (V3.0)
+- **Paleta de Cores Premium**: Tons de **Indigo (Primário)** e **Slate (Base)** para um ambiente profissional.
+- **Logotipo Personalizado**: Upload de marca própria disponível em **Configurações**, visível na barra lateral e relatórios.
+- **Responsividade Mobile**: Menu lateral retrátil e layout adaptativo para celulares e tablets.
+
+## Funcionalidades e Gestão
+### 1. Painel Geral Inteligente
+- **Gráficos SVG**: Progresso médio dos eventos visível instantaneamente.
+- **Resumo de Agenda**: Visualização limpa dos próximos 5 compromissos (sem distrações visuais).
+
+## ✨ Refinamento Estético e Customização de Marca
+
+Implementei uma reformulação visual completa para alinhar o sistema a um padrão de luxo e profissionalismo exigido pelo mercado de cerimonial.
+
+### 🎨 Nova Paleta Premium: Champagne & Charcoal
+Substituí o azul genérico por uma paleta sofisticada:
+- **Cor Primária:** Dourado Champagne (`#C5A059`)
+- **Fundo:** Off-white quente (`#FDFCFB`)
+- **Tipografia:** Mistura de *Playfair Display* (Serifa clássica) e *Inter* (Sans-serif moderna)
+
+### ⚙️ Seletor de Cores Dinâmico
+Para garantir que o sistema combine perfeitamente com o logotipo carregado pelo usuário, adicionei um novo campo nas **Configurações**:
+- **Personalização de Cor:** O usuário agora pode escolher qualquer cor hexadecimal via seletor nativo.
+- **Persistência Inteligente:** A cor escolhida é aplicada instantaneamente em todo o sistema (botões, ícones, menus, tabelas e relatórios) e salva permanentemente no navegador.
+
+### 🛠️ Ajustes Técnicos de Design
+- **Sombras e Estados:** Sombras agora são neutras e estados de *focus/hover* utilizam transparências dinâmicas da cor primária escolhida.
+- **Tabelas e Cards:** Refinamento de espaçamentos e bordas para um visual mais limpo e "premium".
+
+## 🔒 Segurança e Privacidade Multi-usuário
+
+Transformei o sistema para suportar múltiplos cerimonialistas de forma totalmente isolada e segura.
+
+### 🔑 Autenticação de Nível Bancário
+- **Criptografia Local:** As senhas nunca são salvas em texto puro. Utilizei a *Web Crypto API (SHA-256)* para garantir que nem mesmo acessando o banco de dados as senhas possam ser lidas.
+- **Sessão Segura:** O sistema detecta automaticamente se você está logado e protege todas as suas informações.
+
+### 🛡️ Isolamento Total de Dados
+- **Privacidade Garantida:** Cada usuário tem seu próprio ID único. Seus clientes, eventos, fotos e configurações são visíveis **apenas para você**.
+- **Independência de Marca:** Diferentes usuários podem ter logotipos, nomes e cores de identidade completamente diferentes no mesmo computador.
+
+### 🚪 Controle de Acesso
+- **Telas de Login/Cadastro:** Interfaces profissionais para entrada e criação de novas contas.
+- **Logout Seguro:** Opção de sair do sistema para proteger seus dados em computadores compartilhados.
+
+## 🤝 Vínculo de Eventos e Fornecedores
+
+Agora o sistema permite uma gestão integrada entre seus eventos e os profissionais parceiros.
+
+### 📋 Seleção em Lista (Drop-down)
+- Ao abrir o formulário de fornecedores (através do botão 🤝), você agora utiliza uma lista suspensa de **múltipla seleção**. Isso economiza espaço na tela e deixa o formulário mais organizado.
+- **Dica:** Basta segurar a tecla `Ctrl` (ou `Cmd`) para selecionar todos os parceiros que deseja vincular ao evento.
+
+### 🛒 Catálogo de Produtos/Serviços
+- Cada fornecedor possui agora um botão **🛒 Cadastrar Produtos**.
+- **Gestão de Itens:** Você pode criar uma lista de serviços ou produtos oferecidos por aquele parceiro, incluindo o preço sugerido.
+- **Consulta Rápida:** Isso ajuda a ter uma tabela de preços sempre à mão durante as reuniões com os noivos.
+
+### 📞 Central de Contatos do Evento
+- **Checklist Inteligente:** Todos os fornecedores vinculados aparecem na tela de checklist do evento com seus dados de contato, facilitando a comunicação rápida durante o planejamento.
+- **Relatórios Detalhados:** O relatório individual do evento agora inclui automaticamente a lista de todas as empresas contratadas, garantindo que nada seja esquecido no dia da cerimônia.
+
+## 💰 Gestão Financeira e de Convidados
+
+Agora você pode acompanhar os números por trás de cada cerimônia diretamente no sistema.
+
+- **Cálculo Automático:** Ao digitar o número de convidados e o valor por pessoa, o sistema calcula o **Investimento Total** instantaneamente.
+- **Visão Executiva:** As tabelas de eventos agendados e finalizados agora exibem o porte do evento (número de convidados) e o valor total.
+- **Resumo Financeiro:** O relatório individual impresso contém um quadro de destaque com o resumo financeiro para facilitar a prestação de contas.
+
+## 📊 Relatórios de Eventos Finalizados
+
+Agora você tem controle total sobre o histórico das suas cerimônias concluídas.
+
+- **Relatório Geral (Sucesso):** Um novo botão permite gerar um relatório consolidado com todos os eventos finalizados, ótimo para seu portfólio.
+- **Impressão Individual:** Cada evento concluído agora possui um botão **🖨️ Imprimir** para gerar uma ficha técnica final do serviço prestado.
+
+### 2. Gestão de Fotos e Galeria
+- **Upload Focado**: Adicione fotos (📸) diretamente na listagem da página de **Eventos**.
+- **Galeria Global**: Nova aba que reúne todas as fotos de todos os eventos em um portfólio unificado.
+- **Checklist**: Controle total de tarefas com visualização das fotos enviadas por evento.
+
+### 3. Ficha do Cliente e Relatórios
+- **Dossiê Completo**: Histórico de eventos e progresso detalhado.
+- **Relatórios PDF**: Documentos profissionais com sua marca para Clientes, Eventos e Contratos.
+
+## Como Utilizar
+Abra o [index.html](file:///c:/Users/val_s/.gemini/antigravity/playground/vector-mare/index.html) no seu navegador. O sistema é 100% local e privado.

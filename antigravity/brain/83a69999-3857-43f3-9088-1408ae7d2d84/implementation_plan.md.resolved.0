@@ -1,0 +1,43 @@
+# Ceremonialist Management System - Implementation Plan
+
+This system will be a robust, minimalist, and reliable tool for Ceremonialists to manage clients, events, and vendors. It uses a "rustic" design aesthetic and a "back-to-basics" no-build architecture for maximum reliability and ease of use.
+
+## Design Aesthetic: "Rustic & Minimalist"
+- **Color Palette**: Cream/Off-white background (`#FCF9F2`), Dark Espresso text (`#2C2925`), Muted Sage accents (`#84A98C`).
+- **Typography**: Serif headers (Playfair Display) and clean body text.
+- **Visuals**: Clean lines, generous whitespace, subtle paper-like textures (via CSS).
+
+## Proposed Changes
+
+### Core Architecture
+The system will use **Vanilla JS** with **ESM modules**. Data will be persisted in `localStorage`.
+
+### Files to Create
+
+#### [NEW] [index.html](file:///c:/Users/val_s/.gemini/antigravity/playground/vector-mare/index.html)
+The main entry point, containing the shell of the application.
+
+#### [NEW] [style.css](file:///c:/Users/val_s/.gemini/antigravity/playground/vector-mare/style.css)
+The heart of the "rustic" design system, defining variables and layout.
+
+#### [NEW] [js/app.js](file:///c:/Users/val_s/.gemini/antigravity/playground/vector-mare/js/app.js)
+The main application controller and router.
+
+#### [NEW] [js/storage.js](file:///c:/Users/val_s/.gemini/antigravity/playground/vector-mare/js/storage.js)
+The data layer, handling CRUD operations with `localStorage`.
+
+#### [NEW] [js/ui.js](file:///c:/Users/val_s/.gemini/antigravity/playground/vector-mare/js/ui.js)
+Reusable UI components (buttons, cards, forms) rendered via template literals.
+
+## Verification Plan
+
+### Automated Tests
+- I will perform browser-based testing using the `browser_subagent` to verify:
+  1. Creating a new client.
+  2. Creating an event linked to a client.
+  3. Verifying data persistence after "refresh" (re-opening the page).
+
+### Manual Verification
+1.  **Creation Flow**: Open the "New Client" form, fill data, and save.
+2.  **Navigation**: Ensure switching between Dashboard, Clients, and Events is smooth.
+3.  **Visuals**: Check if the "rustic" look is adhered to (colors, fonts).
