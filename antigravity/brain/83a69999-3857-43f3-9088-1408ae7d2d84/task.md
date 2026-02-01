@@ -128,3 +128,7 @@
     - [x] Remover view "Galeria Global" e lógica de navegação (`js/app.js`)
     - [x] Remover funcionalidade de fotos individuais dos eventos (Upload/Listagem)
     - [x] Limpar o armazenamento (opcional, remover referências a `photos` nos objetos de evento)
+- [/] Task: Correção de Deploy na Vercel
+    - [x] Criar vercel.json para configuração estática
+    - [/] Validar rotas e estrutura de diretórios para Vercel
+    - [ ] Orientar usuário sobre o "Root Directory" nas configurações da Vercel
